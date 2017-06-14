@@ -38,6 +38,24 @@ app.use(session({
   saveUninitialized: true,
   cookie: {secure: false}
 }));
+
+/*HTTS changes - Provide appropriate keys for getting a https setup
+var fs = require('fs');
+var key = fs.readFileSync('cert/privkey1.pem');
+var cert = fs.readFileSync( 'cert/cert1.pem' );
+var ca = fs.readFileSync( 'cert/fullchain1.pem' );
+
+var options = {
+  key: key,
+  cert: cert,
+  ca: ca
+};
+
+
+var https = require('https');
+https.createServer(options, app).listen(443);
+Https changes - end*/
+
 const deviceConnections = {};
 
 /**
