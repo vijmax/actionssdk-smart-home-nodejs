@@ -314,7 +314,7 @@ app.get('/getauthcode', function (req, resp) {
       '');
   }
 });
-app.use('/frontend', express.static('../frontend'));
+app.use('/frontend', express.static('./frontend'));
 app.use('/frontend/', express.static('../frontend'));
 app.use('/', express.static('../frontend'));
 
