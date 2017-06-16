@@ -20,7 +20,7 @@ Config.isLocal = false;
 
 function init() {
   process.argv.forEach(function (value, i, arr) {
-    if (value.includes("smart-home="))
+    if (value.includes("smart-home-pub="))
       Config.smartHomeProviderCloudEndpoint = value.split("=")[1];
     else if (value.includes("isLocal"))
       Config.isLocal = true;
